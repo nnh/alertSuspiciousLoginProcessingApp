@@ -5,7 +5,7 @@ function getRecentEmail() {
   oneDayAgo.setDate(currentDate.getDate() - 1);
   // メールの検索条件を指定
   const subjectText = 'Alert: Suspicious login';
-  const targetDate = Utilities.formatDate(oneDayAgo, 'GMT', 'yyyy/MM/dd');
+  const targetDate = Utilities.formatDate(oneDayAgo, 'JST', 'yyyy/MM/dd');
   let query = '';
   query = query + `subject:${subjectText}`;
   query = query + ` after: ${targetDate}`;
